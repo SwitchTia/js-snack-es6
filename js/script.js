@@ -41,11 +41,20 @@ const footballTeams = [
   { name: "Roma", points: 0, fouls: 0 }
 ];
 
-const getRandomPointsAndFouls = (array) => {
+const assignRandomPointsAndFouls = (array) => {
 
+    for(let i = 0; i < array.length; i++){
+
+        curIndexValue = array[i];
+
+        curIndexValue.points = Math.floor(Math.random() * 10);
+        curIndexValue.fouls = Math.floor(Math.random() * 10);
+    }
+
+    return array;
 }
 
-console.log(getRandomPointsAndFouls(footballTeams));
+console.log(assignRandomPointsAndFouls(footballTeams));
 
 
 
