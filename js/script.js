@@ -41,6 +41,11 @@ const footballTeams = [
   { name: "Roma", points: 0, fouls: 0 }
 ];
 
+const getRandomPointsAndFouls = (array) => {
+
+}
+
+console.log(getRandomPointsAndFouls(footballTeams));
 
 
 
