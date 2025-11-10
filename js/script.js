@@ -3,6 +3,29 @@
 // Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 // Stampare a schermo oppure in console la bici con peso minore.
 
+const bicycleArray = [
+    { name: "Bianchi Sprint", weight: 7.8 },
+    { name: "Specialized Tarmac", weight: 7.2 },
+    { name: "Trek Emonda", weight: 6.9 },
+    { name: "Cannondale SuperSix", weight: 7.5 },
+    { name: "Pinarello Dogma", weight: 6.8 }
+];
+
+const getMinWeight = (array) => {
+    let minBicycle = array[0]; //suppose the first object of the array has the min weight
+
+    for(let i = 0; i < array.length; i++){
+        let valueCurIndex = array[i];
+        
+        if(array[i].weight < minBicycle.weight){ //check if next obj of the array's weight atribute isnt bigger
+            minBicycle = array[i];
+        }
+    }
+    return minBicycle;
+}
+console.log(getMinWeight(bicycleArray));
+
+
 // Snack2
 // Creare un array di oggetti di squadre di calcio.
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
@@ -16,13 +39,13 @@
 // Non usare i metodi di array di JS 
 
 
-const getNumbersIndexMinMax = (array, indexMin, indexMax) =>{
+const getNumbersIndexMinMax = (array, indexMin, indexMax) => {
     const resultArray = [];
-   
-    for(let i = 0; i < array.length; i++){
+
+    for (let i = 0; i < array.length; i++) {
         valoreCurNr = array[i];
 
-        if( i >= indexMin && i <= indexMax){
+        if (i >= indexMin && i <= indexMax) {
             resultArray.push(valoreCurNr);
         }
 
@@ -30,5 +53,5 @@ const getNumbersIndexMinMax = (array, indexMin, indexMax) =>{
     return resultArray;
 }
 //                     0 1 2 3 4 5 6 7 8
- const numbersArray = [2,4,5,8,9,4,2,3,4,]; 
- console.log(getNumbersIndexMinMax(numbersArray, 3, 5));// [894]
+const numbersArray = [2, 4, 5, 8, 9, 4, 2, 3, 4,];
+console.log(getNumbersIndexMinMax(numbersArray, 3, 5));// [894]
