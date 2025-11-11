@@ -31,7 +31,8 @@ console.log(getMinWeight(bicycleArray));
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 // Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
-// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+// Infine, creiamo un nuovo array i cui elementi contengono 
+// solo nomi e falli subiti e stampiamo tutto in console.
 
 const footballTeams = [
   { name: "Juventus", points: 0, fouls: 0 },
@@ -56,6 +57,20 @@ const assignRandomPointsAndFouls = (array) => {
 
 console.log(assignRandomPointsAndFouls(footballTeams));
 
+const foulsFootballTeams = []
+
+for(let i = 0; i < footballTeams.length; i++ ){
+    curIndexValue = footballTeams[i];
+
+    const newFootballTeams = {
+        name: curIndexValue.name,
+        fouls: curIndexValue.fouls,
+    }
+    
+    foulsFootballTeams.push(newFootballTeams);
+}
+
+console.log(foulsFootballTeams);
 
 
 // Snack 3 (Bonus)
@@ -77,6 +92,8 @@ const getNumbersIndexMinMax = (array, indexMin, indexMax) => {
     }
     return resultArray;
 }
+
+
 //                     0 1 2 3 4 5 6 7 8
 const numbersArray = [2, 4, 5, 8, 9, 4, 2, 3, 4,];
 console.log(getNumbersIndexMinMax(numbersArray, 3, 5));// [894]
